@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+*{
+    padding: 0;margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    display: grid;
+    grid-template-columns: 180px 1fr; /* Columna nav fija (roja), Columna main flexible */
+    grid-template-rows: auto 1fr auto;
+    
+    grid-template-areas:
+        "hea hea" /* Header ocupa ambas columnas */
+        "nav mai"     /* Nav a la izquierda, Main a la derecha */
+        "foo foo";/* Footer ocupa ambas columnas */
+    
+    gap: 10px; 
+    min-height: 100vh; 
+    margin: 0;
+}
+
+/* Asignación de áreas a los elementos */
+header {
+    grid-area: hea;
+    background-color: #4CAF50; /* Verde */
+}
+
+nav {
+    grid-area: nav;
+    background-color:crimson; /* Rojo */
+}
+
+main {
+    grid-area: mai;
+    background-color: #f0f0f0; /* Fondo principal de main */
+    padding: 10px;
+}
+
+footer {
+    grid-area: foo;
+    background-color: #FFC107; /* Naranja */
+}
