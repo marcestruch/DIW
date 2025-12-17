@@ -42,3 +42,26 @@ footer {
     grid-area: foo;
     background-color: #FFC107; /* Naranja */
 }
+
+/* Ayuda 2: Grid para Noticias 1 y 2 */
+.noticias-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* Ayuda 3: Grid para bloques azules ("Artx") */
+#ventas {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#ventas article {
+    background-color: #2196F3; /* Azul */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
