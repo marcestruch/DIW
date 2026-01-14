@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+/* Inicializaciones */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+   VERSIÓN MÓVIL (Base)
+   < 768px 
+*/
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 1rem;
+  background-color: #fff;
+  color: #333;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+article {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 0.5rem;
+}
+
+.referencia {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #eee;
+  margin-top: 2rem;
+  border-top: 1px solid #ccc;
+}
+
+/* 
+   VERSIÓN TABLET 
+   >= 768px 
+*/
+@media (min-width: 768px) {
+  body {
+    padding: 2rem;
+    /* Cambio sutil de fondo para indicar cambio de breakpoint si se desea, 
+           pero mantendremos blanco por limpieza o podemos poner un color suave */
+    background-color: #fdfdfd;
+  }
+
+  /* Ejemplo de layout en grid o flex para tablet */
+  #articulos {
+    display: flex;
+    gap: 1rem;
+  }
+
+  article {
+    flex: 1;
+    margin-bottom: 0; /* El margen ya no es necesario con gap */
+  }
+}
+
+/* 
+   VERSIÓN PC 
+   >= 960px 
+*/
+@media (min-width: 960px) {
+  html {
+    background-color: #808080; /* Fondo gris para el html */
+  }
+
+  body {
+    max-width: 960px;
+    margin: 2rem auto; /* Centrado con margen superior/inferior */
+    background-color: #fff; /* Fondo blanco para el contenido */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra proyectada */
+    padding: 2rem 3rem; /* Un poco más de padding interno */
+  }
+}
